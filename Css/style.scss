@@ -10,17 +10,20 @@ $font-family: "Playfair Display";
     list-style-type: none;
 }
 
-li::after {
-    content: "";
-    display: block;
-    background-color: black;
-    width: 0;
-    height: 1px;
-    transition: width 0.1s;
-}
-
-li:hover::after {
-    width: 100%;
+li {
+    &::after {
+        content: "";
+        display: block;
+        background-color: black;
+        width: 0;
+        height: 1px;
+        transition: width 0.1s;
+    }
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
 }
 
 .activeName {
