@@ -1,0 +1,767 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.AccordName {
+  background-color: #FAFAF9;
+}
+
+.AccordionsLeftTop {
+  width: 550px;
+  max-height: 200px;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.AccordionsLeftTop .accordHeader {
+  border: 1px solid #EEEEEE;
+  height: 50px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.AccordionsLeftTop .accordHeader .fa-plus {
+  position: absolute;
+  padding: 3px 15px 5px 10px;
+}
+
+.AccordionsLeftTop .accordHeader .fa-minus {
+  padding: 3px 15px 5px 10px;
+}
+
+.AccordionsLeftTop .accordHeader:hover {
+  background-color: #F34F3F;
+  color: white;
+}
+
+.AccordionsLeftTop .accordHeader:hover .fa-plus {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.AccordionsLeftTop .accordContent {
+  text-align: left;
+  display: none;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 30px 0;
+}
+
+.active {
+  display: block !important;
+}
+
+.main {
+  background-color: #F34F3F;
+  color: white;
+}
+
+.jumbotron {
+  background-color: #FAFAF9 !important;
+}
+
+.jumbotron h1 {
+  font-size: 50px;
+  line-height: 1.32em;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.progressbars {
+  width: 100%;
+  height: 200px;
+  margin: 50px 0 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.progressbars .skills {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.progressbars .skills .skill-name {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.progressbars .skills .skill-bar {
+  height: 3px;
+  background: #EBEBEB;
+  border-radius: 8px;
+}
+
+.progressbars .skills .skill-bar .skill-per {
+  height: 3px;
+  background-color: #f34f3f;
+  border-radius: 8px;
+  width: 0;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  position: relative;
+}
+
+.progressbars .skills .skill-bar .skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  color: #201f1f;
+  font-size: 18px;
+  border-radius: 4px;
+  top: -35px;
+  right: 0;
+  font-weight: 800;
+  font-family: "Quicksand", sans-serif;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+* {
+  list-style-type: none;
+}
+
+li::after {
+  content: "";
+  display: block;
+  background-color: black;
+  width: 0;
+  height: 1px;
+  -webkit-transition: width 0.1s;
+  transition: width 0.1s;
+}
+
+li:hover::after {
+  width: 100%;
+}
+
+.activeName::after {
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 1px;
+}
+
+.activeColor {
+  color: red;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.header .fiorello {
+  position: absolute;
+  padding: 42px 18px 40px 20px;
+  width: 250px;
+  left: 22%;
+  cursor: pointer;
+}
+
+.header .navBar {
+  position: fixed;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 10%;
+}
+
+.header .navBar .mainName {
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 42px 25px 42px 25px;
+}
+
+.header .navBar .mainName:hover .drapDown {
+  display: block;
+}
+
+.header .navBar .mainName:hover .shopMenu {
+  display: block;
+}
+
+.header .navBar .mainName a {
+  color: black;
+  text-decoration: none;
+}
+
+.header .navBar .mainName .shopMenu {
+  position: absolute;
+  width: 175% !important;
+  padding-left: 80px;
+  top: 100%;
+  left: -50%;
+  font-family: "Playfair Display";
+  z-index: 400;
+  display: none;
+  background-color: white;
+  padding-bottom: 40px;
+}
+
+.header .navBar .mainName .shopMenu .shopMenuLists {
+  position: relative;
+  width: 25% !important;
+  margin: 30px 0 80px 0;
+  float: left;
+}
+
+.header .navBar .mainName .shopMenu .shopMenuLists li {
+  width: 100% !important;
+  float: none !important;
+  display: block !important;
+  font-size: 12px;
+  margin-bottom: 13px;
+}
+
+.header .navBar .mainName .shopMenu .shopMenuLists li:nth-child(1) {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.header .navBar .mainName .shopMenu .shopMenuLists li:after {
+  content: "";
+  display: block;
+  width: 0%;
+  background-color: black;
+  height: 1px;
+}
+
+.header .navBar .mainName .shopMenu .shopMenuLists li:hover::after {
+  width: 52%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header .navBar .mainName .drapDown {
+  margin-left: -30px;
+  position: relative;
+  z-index: 2000;
+  display: none;
+}
+
+.header .navBar .mainName .drapDown .lists {
+  position: absolute;
+  background-color: white;
+  width: 200px;
+  top: 42px;
+  padding: 8px 30px;
+  text-align: left;
+}
+
+.header .navBar .mainName .drapDown .lists li {
+  cursor: pointer;
+  padding-top: 15px;
+  font-size: 12px;
+}
+
+.header .navBar .mainName .drapDown .lists .portfolio {
+  padding: 0 !important;
+  width: 170px !important;
+  position: relative;
+}
+
+.header .navBar .mainName .drapDown .lists .portfolio .portfoliolayout {
+  position: absolute;
+  background-color: white;
+  margin-top: -40px;
+  padding: 18px !important;
+  left: 170px !important;
+  width: 200px !important;
+  display: none !important;
+  font-size: 15px;
+}
+
+.header .navBar .mainName .drapDown .lists .portfolio li:nth-child(4):hover .portfoliolayout {
+  display: block !important;
+}
+
+.header .navBar .mainName .drapDown .lists .portfolio li:nth-child(5):hover .portfoliolayout {
+  display: block !important;
+}
+
+.header .navBar .mainName .drapDown .lists .portfolio .fa-arrow-right {
+  position: absolute;
+  font-size: 6px;
+  padding-top: 8px;
+  padding-left: 3px;
+  right: 7%;
+}
+
+.header .navBar .mainName .drapDown .lists .blog {
+  position: relative;
+  padding: 0 !important;
+  width: 170px !important;
+}
+
+.header .navBar .mainName .drapDown .lists .blog .post {
+  position: absolute;
+  background-color: white;
+  margin-top: -40px;
+  padding: 18px !important;
+  left: 170px !important;
+  width: 200px !important;
+  display: none !important;
+  font-size: 15px;
+}
+
+.header .navBar .mainName .drapDown .lists .blog li:nth-child(3):hover .post {
+  display: block !important;
+}
+
+.header .navBar .mainName .drapDown .lists .blog .fa-arrow-right {
+  position: absolute;
+  font-size: 6px;
+  padding-top: 8px;
+  padding-left: 3px;
+  right: 7%;
+}
+
+.header .navBar .mainName .drapDown .lists .elements {
+  position: relative;
+  padding: 0 !important;
+  width: 170px !important;
+}
+
+.header .navBar .mainName .drapDown .lists .elements .elementsmenu {
+  position: absolute;
+  background-color: white;
+  margin-top: -40px;
+  padding: 18px !important;
+  left: 170px !important;
+  width: 200px !important;
+  display: none !important;
+  font-size: 15px;
+}
+
+.header .navBar .mainName .drapDown .lists .elements .two {
+  top: 60px !important;
+}
+
+.header .navBar .mainName .drapDown .lists .elements .three {
+  top: 70px !important;
+}
+
+.header .navBar .mainName .drapDown .lists .elements .four {
+  top: 80px !important;
+}
+
+.header .navBar .mainName .drapDown .lists .elements li:nth-child(1):hover .elementsmenu {
+  display: block !important;
+}
+
+.header .navBar .mainName .drapDown .lists .elements li:nth-child(2):hover .elementsmenu {
+  display: block !important;
+}
+
+.header .navBar .mainName .drapDown .lists .elements li:nth-child(3):hover .elementsmenu {
+  display: block !important;
+}
+
+.header .navBar .mainName .drapDown .lists .elements li:nth-child(4):hover .elementsmenu {
+  display: block !important;
+}
+
+.header .navBar .mainName .drapDown .lists .elements .fa-arrow-right {
+  position: absolute;
+  font-size: 6px;
+  padding-top: 8px;
+  padding-left: 3px;
+  right: 7%;
+}
+
+.header .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  right: 7%;
+  padding: 43px 20px 43px 16px;
+  cursor: pointer;
+}
+
+.header .icon .fa-search {
+  margin-right: 20px;
+}
+
+.header .icon .fa-search:hover {
+  color: red;
+}
+
+.header .icon .fa-shopping-bag {
+  color: red;
+  margin-left: 12px;
+}
+
+.header .icon span {
+  margin-left: 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.slideSection {
+  width: 100%;
+  position: relative;
+}
+
+.slideSection .left {
+  position: absolute;
+  top: 48%;
+  left: 2%;
+  z-index: 5;
+  font-size: 30px;
+}
+
+.slideSection .right {
+  position: absolute;
+  top: 48%;
+  right: 2%;
+  z-index: 5;
+  font-size: 30px;
+}
+
+.slideSection .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.slideSection .slider .leftSide {
+  position: relative;
+  left: -42%;
+  width: 480px;
+  padding: 80px 0px 80px 85px;
+  z-index: 20;
+}
+
+.slideSection .slider .leftSide h2 {
+  font-family: "Playfair Display";
+  font-weight: 350;
+  font-size: 46.15385px;
+}
+
+.slideSection .slider .leftSide h2 span {
+  color: red;
+}
+
+.slideSection .slider .leftSide p {
+  margin: 25px 0 30px 0;
+  font-family: "Playfair Display";
+  color: #696666;
+  font-size: 17.64706px;
+}
+
+.slideSection .slider .leftSide img {
+  padding-bottom: 30px;
+}
+
+.slideSection .slider .slideImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 600px;
+}
+
+.slideSection .slider .slideImages .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slideSection .slider .slideImages .items img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.allPicSection {
+  margin-top: 65px;
+}
+
+.allPicSection .aboutPic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.allPicSection .aboutPic div {
+  padding: 0px 20px 0px 20px;
+  font-size: 15px;
+  font-family: "Playfair Display";
+}
+
+.allPicSection .aboutPic div:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.allPicSection .cardImg {
+  margin-top: 35px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.allPicSection .cardImg .thisImg {
+  width: 97%;
+}
+
+.allPicSection .cardImg .thisImg:hover {
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-transform: scale(1.005);
+          transform: scale(1.005);
+}
+
+.allPicSection .cardImg .flowName {
+  margin-top: 18px;
+  margin-bottom: 0px;
+  letter-spacing: 1px;
+  font-family: "Playfair Display";
+  font-size: 15px;
+  text-align: center;
+}
+
+.allPicSection .cardImg .flowPrice {
+  font-family: "Playfair Display";
+  text-align: center;
+  opacity: 0.5;
+}
+
+.valentineSection {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  background-color: #F7F7F7;
+}
+
+.valentineSection .valImg {
+  padding: 120px 0 120px 0;
+  width: 100%;
+  height: 100%;
+}
+
+.valentineSection .valMainText {
+  padding: 130px 0 0px 60px;
+  font-size: 44px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.valentineSection .valMainText span {
+  color: red;
+}
+
+.valentineSection .valMidText {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 30px 0 28px 65px;
+  color: #979797;
+}
+
+.valentineSection .heartPng {
+  margin-left: 65px;
+  color: #979797;
+}
+
+.valentineSection .heartPng img {
+  padding-right: 15px;
+}
+
+.flowerExpertsSection {
+  margin-top: 140px;
+}
+
+.flowerExpertsSection .flowTotalText {
+  margin-bottom: 90px;
+}
+
+.flowerExpertsSection .flowTotalText .flowerExpertsMainText {
+  width: 100%;
+  font-size: 40px;
+  font-family: "Playfair Display";
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.flowerExpertsSection .flowTotalText .flowerExpertsMidText {
+  max-width: 520px;
+  margin-left: 27%;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Playfair Display";
+  color: #979797;
+}
+
+.flowerExpertsSection .flowerExpertsImg {
+  padding-bottom: 140px;
+}
+
+.flowerExpertsSection .flowerExpertsImg .flowerExperts {
+  margin-bottom: 20px;
+}
+
+.flowerExpertsSection .flowerExpertsImg .expertName {
+  margin-bottom: 0px;
+  letter-spacing: 1px;
+  font-family: "Playfair Display";
+  font-size: 15px;
+  text-align: center;
+}
+
+.flowerExpertsSection .flowerExpertsImg .expertJob {
+  font-family: "Playfair Display";
+  text-align: center;
+  opacity: 0.5;
+}
+
+.subscribeSection .joinUs {
+  background: url("../img/Untitled.png");
+  width: 100%;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribeSection .joinUs .joinText {
+  margin-top: 140px;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  line-height: 1.4em;
+  color: white;
+}
+
+.subscribeSection .joinUs .joinEmail {
+  margin-left: 30%;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Playfair Display";
+  color: #979797;
+  margin-right: -5px;
+  margin-top: 20px;
+}
+
+.subscribeSection .joinUs .subs {
+  background-color: #f74747;
+  color: white;
+  padding: 13px 25px 9.2px 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.fromOurBlogSection {
+  background-color: #F7F7F7;
+  padding-top: 120px;
+}
+
+.fromOurBlogSection .blogTotalText {
+  margin-bottom: 90px;
+}
+
+.fromOurBlogSection .blogTotalText .blogMainText {
+  width: 100%;
+  font-size: 40px;
+  font-family: "Playfair Display";
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.fromOurBlogSection .blogTotalText .blogMidText {
+  max-width: 520px;
+  margin-left: 27%;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Playfair Display";
+  color: #979797;
+}
+
+.fromOurBlogSection .bloggerImg {
+  padding-bottom: 140px;
+}
+
+.fromOurBlogSection .bloggerImg .blogImg .blog {
+  margin-bottom: 20px;
+  max-height: 20%;
+  width: 350px;
+  height: 240px;
+  width: 102%;
+}
+
+.fromOurBlogSection .bloggerImg .blogImg .blogName {
+  margin-bottom: 0px;
+  letter-spacing: 1px;
+  font-family: "Playfair Display";
+  font-size: 25px;
+  text-align: center;
+}
+
+.fromOurBlogSection .bloggerImg .blogImg .aboutBlog {
+  margin-top: 4px;
+  font-family: "Playfair Display";
+  text-align: center;
+  width: 280px;
+  opacity: 0.5;
+  margin-left: 40px;
+}
+
+.lastSection .lastSlide {
+  position: relative;
+  width: 550px;
+  height: 400px;
+  padding: 90px 0 90px 0;
+  text-align: center;
+}
+
+.lastSection .lastSlide .active {
+  opacity: 1 !important;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.lastSection .lastSlide .lorem {
+  opacity: 0;
+  position: absolute;
+}
+
+.lastSection .lastSlide .lorem .lastSlideText {
+  margin-top: 25px;
+  margin-left: 10%;
+  font-size: 20px;
+  width: 80%;
+}
+
+.lastSection i {
+  position: absolute;
+  font-size: 20px;
+  margin-top: 15%;
+}
+
+.lastSection .fa-long-arrow-alt-left {
+  left: 25%;
+}
+
+.lastSection .fa-long-arrow-alt-right {
+  right: 25%;
+}
+/*# sourceMappingURL=style.css.map */

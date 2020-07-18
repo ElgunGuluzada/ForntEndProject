@@ -1,0 +1,56 @@
+.jumbotron {
+    background-color: #FAFAF9!important;
+    h1 {
+        font-size: 50px;
+        line-height: 1.32em;
+        font-family: "Playfair Display", serif;
+        font-weight: 400;
+    }
+}
+
+.progressbars {
+    width: 100%;
+    height: 200px;
+    margin: 50px 0 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .skills {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+        .skill-name {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 20px 0;
+            font-family: "Quicksand", sans-serif;
+        }
+        .skill-bar {
+            height: 3px;
+            background: #EBEBEB;
+            border-radius: 8px;
+            .skill-per {
+                height: 3px;
+                background-color: rgb(243, 79, 63);
+                border-radius: 8px;
+                width: 0;
+                transition: 1s linear;
+                position: relative;
+                &::before {
+                    content: attr(per);
+                    position: absolute;
+                    padding: 4px 6px;
+                    color: rgb(32, 31, 31);
+                    font-size: 18px;
+                    border-radius: 4px;
+                    top: -35px;
+                    right: 0;
+                    font-weight: 800;
+                    font-family: "Quicksand", sans-serif;
+                    transform: translateX(50%);
+                }
+            }
+        }
+    }
+}
