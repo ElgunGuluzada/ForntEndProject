@@ -10,22 +10,6 @@ $font-family: "Playfair Display";
     list-style-type: none;
 }
 
-li {
-    &::after {
-        content: "";
-        display: block;
-        background-color: black;
-        width: 0;
-        height: 1px;
-        transition: width 0.1s;
-    }
-    &:hover {
-        &::after {
-            width: 100%;
-        }
-    }
-}
-
 .activeName {
     &::after {
         display: block;
@@ -55,6 +39,21 @@ li {
         position: absolute;
         display: flex;
         right: 10%;
+        li {
+            &::after {
+                content: " ";
+                display: block;
+                background-color: black;
+                width: 0;
+                height: 1px;
+                transition: width 0.1s;
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
         .mainName {
             font-size: $font-size/4-1;
             letter-spacing: 1px;
@@ -83,14 +82,15 @@ li {
                 .shopMenuLists {
                     position: relative;
                     width: 25%!important;
-                    margin: 30px 0 80px 0;
+                    margin: 30px 0 85px 0;
                     float: left;
                     li {
                         width: 100%!important;
                         float: none !important;
                         display: block !important;
-                        font-size: 12px;
+                        font-size: 15px;
                         margin-bottom: 13px;
+                        font-family: $font-family;
                         &:nth-child(1) {
                             color: black;
                             font-size: 20px;
@@ -126,8 +126,8 @@ li {
                     text-align: left;
                     li {
                         cursor: pointer;
-                        padding-top: 15px;
-                        font-size: $font-size/5;
+                        padding: 8px 0;
+                        font-size: $font-size/4-2;
                     }
                     .portfolio {
                         padding: 0!important;
@@ -136,7 +136,7 @@ li {
                         .portfoliolayout {
                             position: absolute;
                             background-color: white;
-                            margin-top: -40px;
+                            margin-top: -45px;
                             padding: 18px !important;
                             left: 170px !important;
                             width: 200px !important;
@@ -144,18 +144,9 @@ li {
                             font-size: 15px;
                         }
                         li {
-                            &:nth-child(4) {
-                                &:hover {
-                                    .portfoliolayout {
-                                        display: block !important;
-                                    }
-                                }
-                            }
-                            &:nth-child(5) {
-                                &:hover {
-                                    .portfoliolayout {
-                                        display: block !important;
-                                    }
+                            &:hover {
+                                .portfoliolayout {
+                                    display: block !important;
                                 }
                             }
                         }
@@ -174,7 +165,7 @@ li {
                         .post {
                             position: absolute;
                             background-color: white;
-                            margin-top: -40px;
+                            margin-top: -45px;
                             padding: 18px !important;
                             left: 170px !important;
                             width: 200px !important;
@@ -182,11 +173,9 @@ li {
                             font-size: 15px;
                         }
                         li {
-                            &:nth-child(3) {
-                                &:hover {
-                                    .post {
-                                        display: block !important;
-                                    }
+                            &:hover {
+                                .post {
+                                    display: block !important;
                                 }
                             }
                         }
@@ -205,49 +194,17 @@ li {
                         .elementsmenu {
                             position: absolute;
                             background-color: white;
-                            margin-top: -40px;
+                            margin-top: -45px;
                             padding: 18px !important;
                             left: 170px !important;
                             width: 200px !important;
                             display: none !important;
                             font-size: 15px;
                         }
-                        .two {
-                            top: 60px !important;
-                        }
-                        .three {
-                            top: 70px !important;
-                        }
-                        .four {
-                            top: 80px !important;
-                        }
                         li {
-                            &:nth-child(1) {
-                                &:hover {
-                                    .elementsmenu {
-                                        display: block !important;
-                                    }
-                                }
-                            }
-                            &:nth-child(2) {
-                                &:hover {
-                                    .elementsmenu {
-                                        display: block !important;
-                                    }
-                                }
-                            }
-                            &:nth-child(3) {
-                                &:hover {
-                                    .elementsmenu {
-                                        display: block !important;
-                                    }
-                                }
-                            }
-                            &:nth-child(4) {
-                                &:hover {
-                                    .elementsmenu {
-                                        display: block !important;
-                                    }
+                            &:hover {
+                                .elementsmenu {
+                                    display: block !important;
                                 }
                             }
                         }
@@ -593,5 +550,13 @@ li {
     }
     .fa-long-arrow-alt-right {
         right: 25%;
+    }
+}
+
+.footer {
+    background-color: #FEFAF3;
+    a {
+        color: $text-color;
+        font-size: $font-size/5;
     }
 }

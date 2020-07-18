@@ -135,20 +135,6 @@
   list-style-type: none;
 }
 
-li::after {
-  content: "";
-  display: block;
-  background-color: black;
-  width: 0;
-  height: 1px;
-  -webkit-transition: width 0.1s;
-  transition: width 0.1s;
-}
-
-li:hover::after {
-  width: 100%;
-}
-
 .activeName::after {
   display: block;
   background-color: black;
@@ -182,6 +168,20 @@ li:hover::after {
   display: -ms-flexbox;
   display: flex;
   right: 10%;
+}
+
+.header .navBar li::after {
+  content: " ";
+  display: block;
+  background-color: black;
+  width: 0;
+  height: 1px;
+  -webkit-transition: width 0.1s;
+  transition: width 0.1s;
+}
+
+.header .navBar li:hover::after {
+  width: 100%;
 }
 
 .header .navBar .mainName {
@@ -219,7 +219,7 @@ li:hover::after {
 .header .navBar .mainName .shopMenu .shopMenuLists {
   position: relative;
   width: 25% !important;
-  margin: 30px 0 80px 0;
+  margin: 30px 0 85px 0;
   float: left;
 }
 
@@ -227,8 +227,9 @@ li:hover::after {
   width: 100% !important;
   float: none !important;
   display: block !important;
-  font-size: 12px;
+  font-size: 15px;
   margin-bottom: 13px;
+  font-family: "Playfair Display";
 }
 
 .header .navBar .mainName .shopMenu .shopMenuLists li:nth-child(1) {
@@ -269,8 +270,8 @@ li:hover::after {
 
 .header .navBar .mainName .drapDown .lists li {
   cursor: pointer;
-  padding-top: 15px;
-  font-size: 12px;
+  padding: 8px 0;
+  font-size: 13px;
 }
 
 .header .navBar .mainName .drapDown .lists .portfolio {
@@ -282,7 +283,7 @@ li:hover::after {
 .header .navBar .mainName .drapDown .lists .portfolio .portfoliolayout {
   position: absolute;
   background-color: white;
-  margin-top: -40px;
+  margin-top: -45px;
   padding: 18px !important;
   left: 170px !important;
   width: 200px !important;
@@ -290,11 +291,7 @@ li:hover::after {
   font-size: 15px;
 }
 
-.header .navBar .mainName .drapDown .lists .portfolio li:nth-child(4):hover .portfoliolayout {
-  display: block !important;
-}
-
-.header .navBar .mainName .drapDown .lists .portfolio li:nth-child(5):hover .portfoliolayout {
+.header .navBar .mainName .drapDown .lists .portfolio li:hover .portfoliolayout {
   display: block !important;
 }
 
@@ -315,7 +312,7 @@ li:hover::after {
 .header .navBar .mainName .drapDown .lists .blog .post {
   position: absolute;
   background-color: white;
-  margin-top: -40px;
+  margin-top: -45px;
   padding: 18px !important;
   left: 170px !important;
   width: 200px !important;
@@ -323,7 +320,7 @@ li:hover::after {
   font-size: 15px;
 }
 
-.header .navBar .mainName .drapDown .lists .blog li:nth-child(3):hover .post {
+.header .navBar .mainName .drapDown .lists .blog li:hover .post {
   display: block !important;
 }
 
@@ -344,7 +341,7 @@ li:hover::after {
 .header .navBar .mainName .drapDown .lists .elements .elementsmenu {
   position: absolute;
   background-color: white;
-  margin-top: -40px;
+  margin-top: -45px;
   padding: 18px !important;
   left: 170px !important;
   width: 200px !important;
@@ -352,31 +349,7 @@ li:hover::after {
   font-size: 15px;
 }
 
-.header .navBar .mainName .drapDown .lists .elements .two {
-  top: 60px !important;
-}
-
-.header .navBar .mainName .drapDown .lists .elements .three {
-  top: 70px !important;
-}
-
-.header .navBar .mainName .drapDown .lists .elements .four {
-  top: 80px !important;
-}
-
-.header .navBar .mainName .drapDown .lists .elements li:nth-child(1):hover .elementsmenu {
-  display: block !important;
-}
-
-.header .navBar .mainName .drapDown .lists .elements li:nth-child(2):hover .elementsmenu {
-  display: block !important;
-}
-
-.header .navBar .mainName .drapDown .lists .elements li:nth-child(3):hover .elementsmenu {
-  display: block !important;
-}
-
-.header .navBar .mainName .drapDown .lists .elements li:nth-child(4):hover .elementsmenu {
+.header .navBar .mainName .drapDown .lists .elements li:hover .elementsmenu {
   display: block !important;
 }
 
@@ -763,5 +736,14 @@ li:hover::after {
 
 .lastSection .fa-long-arrow-alt-right {
   right: 25%;
+}
+
+.footer {
+  background-color: #FEFAF3;
+}
+
+.footer a {
+  color: #979797;
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
