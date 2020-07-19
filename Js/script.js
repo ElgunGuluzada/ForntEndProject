@@ -17,34 +17,49 @@ $(document).ready(function() {
 
     // accordion start
 
-    $(document).on("click", ".accordion_head", function() {
-        $(this).addClass("main").css("transition", "all .5s");
-        $(this).siblings().removeClass("main");
+    $('.toggle').click(function() {
+            event.preventDefault();
+            let $this = $(this);
 
-        if ($('.accordion_body').is(':visible')) {
-            $(".accordion_body").slideUp(300);
-            $(".plusminus").text('+');
-        }
-        if ($(this).next(".accordion_body").is(':visible')) {
-            $(this).next(".accordion_body").slideUp(300);
-            $(this).children(".plusminus").text('+');
-        } else {
-            $(this).next(".accordion_body").slideDown(300);
-            $(this).children(".plusminus").text('-');
-        }
-        if ($(this).next()[0] != $(".active")[0]) {
-            $(".active").slideUp("fast", function() {
-                $(this).removeClass("active")
-            })
-            $(this).next().slideDown("fast", function() {
-                $(this).addClass("active")
-            })
-        } else {
-            $(".active").slideUp("fast", function() {
-                $(this).removeClass("active")
-            })
-        }
-    })
+            if ($this.next().hasClass('show')) {
+                $this.next().removeClass('show').slideUp(250);
+            } else {
+                $this.parent().parent().find('li .inner').removeClass('show');
+                $this.parent().parent().find('li .inner').slideUp(250);
+                $this.next().toggleClass('show');
+                $this.next().slideToggle(250);
+                $this.find('open').removeClass('open')
+            }
+
+        })
+        // $(document).on("click", ".accordion_head", function() {
+        //     $(this).addClass("main").css("transition", "all .5s");
+        //     $(this).siblings().removeClass("main");
+
+    //     if ($('.accordion_body').is(':visible')) {
+    //         $(".accordion_body").slideUp(300);
+    //         $(".plusminus").text('+');
+    //     }
+    //     if ($(this).next(".accordion_body").is(':visible')) {
+    //         $(this).next(".accordion_body").slideUp(300);
+    //         $(this).children(".plusminus").text('+');
+    //     } else {
+    //         $(this).next(".accordion_body").slideDown(300);
+    //         $(this).children(".plusminus").text('-');
+    //     }
+    //     if ($(this).next()[0] != $(".active")[0]) {
+    //         $(".active").slideUp("fast", function() {
+    //             $(this).removeClass("active")
+    //         })
+    //         $(this).next().slideDown("fast", function() {
+    //             $(this).addClass("active")
+    //         })
+    //     } else {
+    //         $(".active").slideUp("fast", function() {
+    //             $(this).removeClass("active")
+    //         })
+    //     }
+    // })
 
     //  accordion end
 

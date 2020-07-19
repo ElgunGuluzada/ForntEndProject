@@ -1,6 +1,7 @@
     @import "Partials/accordion";
     @import "Partials/progressbar";
     @import "Partials/tab";
+    @import "Partials/productlist";
     $font-size: 60px;
     $red-color: red;
     $text-color: rgb(151, 151, 151);
@@ -38,6 +39,9 @@
                 line-height: 1.32em;
                 font-family: "Playfair Display", serif;
                 font-weight: 400;
+            }
+            p {
+                color: $text-color;
             }
         }
         .activeName {
@@ -326,16 +330,42 @@
             }
             .flowName {
                 margin-top: 18px;
-                margin-bottom: 0px;
+                margin-bottom: 5px;
                 letter-spacing: 1px;
                 font-family: $font-family;
                 font-size: $font-size/4;
                 text-align: center;
             }
-            .flowPrice {
-                font-family: $font-family;
-                text-align: center;
-                opacity: 0.5;
+            .oneImg {
+                padding-bottom: 18px;
+                &:hover .flowPrice {
+                    display: none;
+                }
+                &:hover .addToCart {
+                    display: block !important;
+                }
+                .priceSection {
+                    p {
+                        font-size: $font-size/5;
+                        position: absolute;
+                        margin-bottom: 10px;
+                    }
+                    .addToCart {
+                        font-family: $font-family;
+                        color: $text-color;
+                        display: none;
+                        left: 35%;
+                        &:hover {
+                            color: red;
+                            cursor: pointer;
+                        }
+                    }
+                    .flowPrice {
+                        left: 45%;
+                        font-family: $font-family;
+                        color: $text-color;
+                    }
+                }
             }
         }
     }
@@ -482,10 +512,6 @@
             .blogImg {
                 .blog {
                     margin-bottom: 20px;
-                    max-height: 20%;
-                    width: 350px;
-                    height: 240px;
-                    width: 102%;
                 }
                 .blogName {
                     margin-bottom: 0px;
@@ -499,7 +525,7 @@
                     font-family: $font-family;
                     text-align: center;
                     width: 280px;
-                    opacity: 0.5;
+                    color: $text-color;
                     margin-left: 40px;
                 }
             }

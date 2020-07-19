@@ -11,10 +11,10 @@
         padding: 0 20px;
         .skill-name {
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 400;
             text-transform: uppercase;
             margin: 20px 0;
-            font-family: "Quicksand", sans-serif;
+            font-family: "Playfair Display", sans-serif;
         }
         .skill-bar {
             height: 3px;
@@ -25,7 +25,7 @@
                 background-color: rgb(243, 79, 63);
                 border-radius: 8px;
                 width: 0;
-                transition: 1s linear;
+                transition: 1.2s linear;
                 position: relative;
                 &::before {
                     content: attr(per);
@@ -36,10 +36,17 @@
                     border-radius: 4px;
                     top: -35px;
                     right: 0;
-                    font-weight: 800;
+                    font-weight: 400;
                     font-family: "Quicksand", sans-serif;
                     transform: translateX(50%);
                 }
+            }
+        }
+        .last {
+            .skill-bar {
+                height: 3px;
+                background: #000000!important;
+                border-radius: 8px;
             }
         }
     }
