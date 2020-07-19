@@ -1,541 +1,553 @@
-@import "Partials/accordion";
-@import "Partials/progressbar";
-$font-size: 60px;
-$red-color: red;
-$text-color: rgb(151, 151, 151);
-$main-color: #F7F7F7;
-$black-color: black;
-$font-family: "Playfair Display";
-* {
-    list-style-type: none;
-}
-
-.activeName {
-    &::after {
-        display: block;
-        background-color: black;
-        width: 100%;
-        height: 1px;
+    @import "Partials/accordion";
+    @import "Partials/progressbar";
+    @import "Partials/tab";
+    $font-size: 60px;
+    $red-color: red;
+    $text-color: rgb(151, 151, 151);
+    $main-color: #F7F7F7;
+    $black-color: black;
+    $font-family: "Playfair Display";
+    * {
+        list-style-type: none;
     }
-}
-
-.activeColor {
-    color: $red-color;
-}
-
-//    start Header
-.header {
-    display: flex;
-    position: relative;
-    .fiorello {
-        position: absolute;
-        padding: 42px 18px 40px 20px;
-        width: 250px;
-        left: 22%;
-        cursor: pointer;
-    }
-    .navBar {
-        position: fixed;
-        position: absolute;
-        display: flex;
-        right: 10%;
-        li {
+    
+    body {
+        .frame {
+            width: 100%;
+            overflow: hidden;
+            .zoomin {
+                width: 100%;
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 2s ease;
+                -ms-transition: all 2s ease;
+                transition: all 0.5s ease;
+                background-position: center;
+                background-size: cover;
+                &:hover {
+                    background-position: center;
+                    transform: scale(1.1);
+                    transition: all .5s;
+                }
+            }
+        }
+        .jumbotron {
+            background-color: #FAFAF9!important;
+            margin: 20px 0 80px 5px;
+            h1 {
+                font-size: 50px;
+                line-height: 1.32em;
+                font-family: "Playfair Display", serif;
+                font-weight: 400;
+            }
+        }
+        .activeName {
             &::after {
-                content: " ";
                 display: block;
-                border-bottom: 1px solid black;
-                width: 0;
-                transition: width 0.1s;
-            }
-            &:hover {
-                &::after {
-                    width: 100%;
-                }
+                background-color: black;
+                width: 100%;
+                height: 1px;
             }
         }
-        .mainName {
-            font-size: $font-size/4-1;
-            letter-spacing: 1px;
-            padding: 42px 25px 42px 25px;
-            &:hover .drapDown {
-                display: block;
-            }
-            &:hover .shopMenu {
-                display: block;
-            }
-            a {
-                color: $black-color;
-                text-decoration: none;
-            }
-            .shopMenu {
-                position: absolute;
-                width: 175%!important;
-                padding-left: 80px;
-                top: 100%;
-                left: -50%;
-                font-family: $font-family;
-                z-index: 400;
-                display: none;
-                background-color: white;
-                padding-bottom: 40px;
-                .shopMenuLists {
-                    position: relative;
-                    width: 25%!important;
-                    margin: 30px 0 85px 0;
-                    float: left;
-                    li {
-                        width: 100%!important;
-                        float: none !important;
-                        display: block !important;
-                        font-size: 15px;
-                        margin-bottom: 13px;
-                        font-family: $font-family;
-                        &:nth-child(1) {
-                            color: black;
-                            font-size: 20px;
-                            margin-bottom: 20px;
-                        }
-                        &:after {
-                            content: "";
-                            display: block;
-                            width: 0;
-                            border-bottom: 1px solid black;
-                        }
-                        &:hover {
-                            &::after {
-                                width: 52%;
-                                transition: all 0.5s;
-                            }
-                        }
-                    }
-                }
-            }
-            .drapDown {
-                margin-left: -30px;
-                position: relative;
-                z-index: 2000;
-                display: none;
-                .lists {
-                    position: absolute;
-                    background-color: white;
-                    width: 200px;
-                    top: 42px;
-                    padding: 8px 30px;
-                    text-align: left;
-                    li {
-                        cursor: pointer;
-                        padding: 8px 0;
-                        font-size: $font-size/4-2;
-                    }
-                    .portfolio {
-                        padding: 0!important;
-                        width: 170px !important;
-                        position: relative;
-                        .portfoliolayout {
-                            position: absolute;
-                            background-color: white;
-                            margin-top: -45px;
-                            padding: 18px !important;
-                            left: 170px !important;
-                            width: 200px !important;
-                            display: none !important;
-                            font-size: 15px;
-                        }
-                        li {
-                            &:hover {
-                                .portfoliolayout {
-                                    display: block !important;
-                                }
-                            }
-                        }
-                        .fa-arrow-right {
-                            position: absolute;
-                            font-size: 6px;
-                            padding-top: 8px;
-                            padding-left: 3px;
-                            right: 7%;
-                        }
-                    }
-                    .blog {
-                        position: relative;
-                        padding: 0!important;
-                        width: 170px !important;
-                        .post {
-                            position: absolute;
-                            background-color: white;
-                            margin-top: -45px;
-                            padding: 18px !important;
-                            left: 170px !important;
-                            width: 200px !important;
-                            display: none !important;
-                            font-size: 15px;
-                        }
-                        li {
-                            &:hover {
-                                .post {
-                                    display: block !important;
-                                }
-                            }
-                        }
-                        .fa-arrow-right {
-                            position: absolute;
-                            font-size: 6px;
-                            padding-top: 8px;
-                            padding-left: 3px;
-                            right: 7%;
-                        }
-                    }
-                    .elements {
-                        position: relative;
-                        padding: 0!important;
-                        width: 170px !important;
-                        .elementsmenu {
-                            position: absolute;
-                            background-color: white;
-                            margin-top: -45px;
-                            padding: 18px !important;
-                            left: 170px !important;
-                            width: 200px !important;
-                            display: none !important;
-                            font-size: 15px;
-                        }
-                        li {
-                            &:hover {
-                                .elementsmenu {
-                                    display: block !important;
-                                }
-                            }
-                        }
-                        .fa-arrow-right {
-                            position: absolute;
-                            font-size: 6px;
-                            padding-top: 8px;
-                            padding-left: 3px;
-                            right: 7%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .icon {
-        display: flex;
-        font-size: $font-size/3;
-        right: 7%;
-        padding: 43px 20px 43px 16px;
-        cursor: pointer;
-        .fa-search {
-            margin-right: $font-size/3;
-            &:hover {
-                color: $red-color;
-            }
-        }
-        .fa-shopping-bag {
+        .activeColor {
             color: $red-color;
-            margin-left: $font-size/5;
-        }
-        span {
-            margin-left: $font-size/3;
-            font-size: $font-size/5;
-            letter-spacing: 2px;
         }
     }
-}
-
-//    end Header
-//    start slideSection
-.firstSlideSection {
-    margin-bottom: 115px;
-    .arrow-left {
-        margin-right: -120px;
-        color: red;
-        background-color: red;
+    
+    //    start Header
+    .header {
+        display: flex;
+        position: relative;
+        .fiorello {
+            position: absolute;
+            padding: 42px 18px 40px 20px;
+            width: 250px;
+            left: 22%;
+            cursor: pointer;
+        }
+        .navBar {
+            position: fixed;
+            position: absolute;
+            display: flex;
+            right: 10%;
+            li {
+                &::after {
+                    content: " ";
+                    display: block;
+                    border-bottom: 1px solid black;
+                    width: 0;
+                    transition: width 0.1s;
+                }
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+            .mainName {
+                font-size: $font-size/4-1;
+                letter-spacing: 1px;
+                padding: 42px 25px 42px 25px;
+                &:hover .drapDown {
+                    display: block;
+                }
+                &:hover .shopMenu {
+                    display: block;
+                }
+                a {
+                    color: $black-color;
+                    text-decoration: none;
+                }
+                .shopMenu {
+                    position: absolute;
+                    width: 180%!important;
+                    padding-left: 80px;
+                    top: 100%;
+                    left: -50%;
+                    font-family: $font-family;
+                    z-index: 400;
+                    display: none;
+                    background-color: white;
+                    padding-bottom: 40px;
+                    .shopMenuLists {
+                        position: relative;
+                        width: 25%!important;
+                        margin: 30px 0 85px 0;
+                        float: left;
+                        li {
+                            width: 100%!important;
+                            float: none !important;
+                            display: block !important;
+                            font-size: 15px;
+                            margin-bottom: 13px;
+                            font-family: $font-family;
+                            &:nth-child(1) {
+                                color: black;
+                                font-size: 20px;
+                                margin-bottom: 20px;
+                            }
+                            &:after {
+                                content: "";
+                                display: block;
+                                width: 0;
+                                border-bottom: 1px solid black;
+                            }
+                            &:hover {
+                                &::after {
+                                    width: 52%;
+                                    transition: all 0.5s;
+                                }
+                            }
+                        }
+                    }
+                }
+                .drapDown {
+                    margin-left: -30px;
+                    position: relative;
+                    z-index: 2000;
+                    display: none;
+                    .lists {
+                        position: absolute;
+                        background-color: white;
+                        width: 200px;
+                        top: 42px;
+                        padding: 8px 30px;
+                        text-align: left;
+                        li {
+                            cursor: pointer;
+                            padding: 8px 0;
+                            font-size: $font-size/4-2;
+                        }
+                        .portfolio {
+                            padding: 0!important;
+                            width: 170px !important;
+                            position: relative;
+                            .portfoliolayout {
+                                position: absolute;
+                                background-color: white;
+                                margin-top: -45px;
+                                padding: 18px !important;
+                                left: 170px !important;
+                                width: 200px !important;
+                                display: none !important;
+                                font-size: 15px;
+                            }
+                            li {
+                                &:hover {
+                                    .portfoliolayout {
+                                        display: block !important;
+                                    }
+                                }
+                            }
+                            .fa-arrow-right {
+                                position: absolute;
+                                font-size: 6px;
+                                padding-top: 8px;
+                                padding-left: 3px;
+                                right: 7%;
+                            }
+                        }
+                        .blog {
+                            position: relative;
+                            padding: 0!important;
+                            width: 170px !important;
+                            .post {
+                                position: absolute;
+                                background-color: white;
+                                margin-top: -45px;
+                                padding: 18px !important;
+                                left: 170px !important;
+                                width: 200px !important;
+                                display: none !important;
+                                font-size: 15px;
+                            }
+                            li {
+                                &:hover {
+                                    .post {
+                                        display: block !important;
+                                    }
+                                }
+                            }
+                            .fa-arrow-right {
+                                position: absolute;
+                                font-size: 6px;
+                                padding-top: 8px;
+                                padding-left: 3px;
+                                right: 7%;
+                            }
+                        }
+                        .elements {
+                            position: relative;
+                            padding: 0!important;
+                            width: 170px !important;
+                            .elementsmenu {
+                                position: absolute;
+                                background-color: white;
+                                margin-top: -45px;
+                                padding: 18px !important;
+                                left: 170px !important;
+                                width: 200px !important;
+                                display: none !important;
+                                font-size: 15px;
+                            }
+                            li {
+                                &:hover {
+                                    .elementsmenu {
+                                        display: block !important;
+                                    }
+                                }
+                            }
+                            .fa-arrow-right {
+                                position: absolute;
+                                font-size: 6px;
+                                padding-top: 8px;
+                                padding-left: 3px;
+                                right: 7%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .icon {
+            display: flex;
+            font-size: $font-size/3;
+            right: 4%;
+            padding: 43px 20px 43px 16px;
+            cursor: pointer;
+            .fa-search {
+                margin-right: $font-size/3;
+                &:hover {
+                    color: $red-color;
+                }
+            }
+            .fa-shopping-bag {
+                color: $red-color;
+                margin-left: $font-size/5;
+            }
+            span {
+                margin-left: $font-size/3;
+                font-size: $font-size/5;
+                letter-spacing: 2px;
+            }
+        }
     }
-    .arrow-prev {
-        margin-left: -120px;
-        background-color: red;
+    
+    //    end Header
+    //    start slideSection
+    .firstSlideSection {
+        margin-bottom: 115px;
+        .leftSide {
+            top: 1px;
+            left: 36px;
+            padding: 80px 0px 50px 85px;
+            z-index: 10;
+            width: 455px;
+            position: absolute !important;
+            h2 {
+                font-family: $font-family;
+                font-weight: 350;
+                font-size: $font-size/1.3;
+                span {
+                    color: $red-color;
+                }
+            }
+            p {
+                margin: 25px 0 25px 0;
+                font-family: $font-family;
+                color: $text-color;
+                font-size: $font-size/3.4;
+            }
+            img {
+                padding-bottom: 70px!important;
+            }
+        }
     }
-    .leftSide {
-        top: 1px;
-        left: 36px;
-        padding: 80px 0px 50px 85px;
-        z-index: 10;
-        width: 455px;
-        position: absolute !important;
-        h2 {
-            font-family: $font-family;
-            font-weight: 350;
-            font-size: $font-size/1.3;
+    
+    //    end slideSection
+    //    start allPicSection
+    .allPicSection {
+        margin-top: 65px;
+        .aboutPic {
+            display: flex;
+            div {
+                padding: 0px 20px 0px 20px;
+                font-size: $font-size/4;
+                font-family: $font-family;
+                &:hover {
+                    color: $red-color;
+                    cursor: pointer;
+                }
+            }
+        }
+        .cardImg {
+            margin-top: 35px;
+            .thisImg {
+                width: 100%;
+            }
+            .flowName {
+                margin-top: 18px;
+                margin-bottom: 0px;
+                letter-spacing: 1px;
+                font-family: $font-family;
+                font-size: $font-size/4;
+                text-align: center;
+            }
+            .flowPrice {
+                font-family: $font-family;
+                text-align: center;
+                opacity: 0.5;
+            }
+        }
+    }
+    
+    //    end allPicSection
+    //    start valentineSection
+    .valentineSection {
+        margin-top: 90px;
+        margin-bottom: 90px;
+        background-color: $main-color;
+        .valImg {
+            margin: 120px 0 120px 0;
+        }
+        .valMainText {
+            padding: 130px 0 0px 60px;
+            font-size: $font-size/2+14;
+            font-family: "Playfair Display", serif;
+            font-weight: 400;
             span {
                 color: $red-color;
             }
         }
-        p {
-            margin: 25px 0 25px 0;
-            font-family: $font-family;
+        .valMidText {
+            font-size: $font-size/3;
+            line-height: 30px;
+            padding: 30px 0 28px 65px;
             color: $text-color;
-            font-size: $font-size/3.4;
         }
-        img {
-            padding-bottom: 70px!important;
+        .heartPng {
+            margin-left: 65px;
+            color: $text-color;
+            img {
+                padding-right: 15px;
+            }
         }
     }
-}
-
-//    end slideSection
-//    start allPicSection
-.allPicSection {
-    margin-top: 65px;
-    .aboutPic {
-        display: flex;
-        div {
-            padding: 0px 20px 0px 20px;
-            font-size: $font-size/4;
-            font-family: $font-family;
-            &:hover {
-                color: $red-color;
+    
+    //    end valentineSection
+    //    start flowerExpertsSection
+    .flowerExpertsSection {
+        margin-top: 140px;
+        .flowTotalText {
+            margin-bottom: 90px;
+            .flowerExpertsMainText {
+                width: 100%;
+                font-size: $font-size/1.5;
+                font-family: $font-family;
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .flowerExpertsMidText {
+                max-width: 520px;
+                margin-left: 27%;
+                text-align: center;
+                font-size: $font-size/3;
+                font-family: $font-family;
+                color: $text-color;
+            }
+        }
+        .flowerExpertsImg {
+            padding-bottom: 140px;
+            .flowerExperts {
+                margin-bottom: 20px;
+            }
+            .expertName {
+                margin-bottom: 0px;
+                letter-spacing: 1px;
+                font-family: $font-family;
+                font-size: $font-size/4;
+                text-align: center;
+            }
+            .expertJob {
+                font-family: $font-family;
+                text-align: center;
+                opacity: 0.5;
+            }
+        }
+    }
+    
+    //    end flowerExpertsSection
+    //    start subscribeSection
+    .subscribeSection {
+        .joinUs {
+            background: url("../img/Untitled.png");
+            width: 100%;
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .joinText {
+                margin-top: 140px;
+                text-align: center;
+                font-size: $font-size/2;
+                font-family: "Playfair Display", serif;
+                font-weight: 400;
+                line-height: 1.4em;
+                color: white;
+            }
+            .joinEmail {
+                margin-left: 30%;
+                text-align: center;
+                font-size: $font-size/2;
+                font-family: $font-family;
+                color: $text-color;
+                margin-right: -5px;
+                margin-top: 20px;
+            }
+            .subs {
+                background-color: rgb(247, 71, 71);
+                color: white;
+                padding: 13px 25px 9.2px 25px;
+                font-size: $font-size/3;
                 cursor: pointer;
             }
         }
     }
-    .cardImg {
-        margin-top: 35px;
-        max-width: 100%;
-        max-height: 100%;
-        .thisImg {
-            width: 97%;
-            &:hover {
-                max-width: 100%;
-                max-height: 100%;
-                transform: scale(1.005);
-            }
-        }
-        .flowName {
-            margin-top: 18px;
-            margin-bottom: 0px;
-            letter-spacing: 1px;
-            font-family: $font-family;
-            font-size: $font-size/4;
-            text-align: center;
-        }
-        .flowPrice {
-            font-family: $font-family;
-            text-align: center;
-            opacity: 0.5;
-        }
-    }
-}
-
-//    end allPicSection
-//    start valentineSection
-.valentineSection {
-    margin-top: 90px;
-    margin-bottom: 90px;
-    background-color: $main-color;
-    .valImg {
-        padding: 120px 0 120px 0;
-        width: 100%;
-        height: 100%;
-    }
-    .valMainText {
-        padding: 130px 0 0px 60px;
-        font-size: $font-size/2+14;
-        font-family: "Playfair Display", serif;
-        font-weight: 400;
-        span {
-            color: $red-color;
-        }
-    }
-    .valMidText {
-        font-size: $font-size/3;
-        line-height: 30px;
-        padding: 30px 0 28px 65px;
-        color: $text-color;
-    }
-    .heartPng {
-        margin-left: 65px;
-        color: $text-color;
-        img {
-            padding-right: 15px;
-        }
-    }
-}
-
-//    end valentineSection
-//    start flowerExpertsSection
-.flowerExpertsSection {
-    margin-top: 140px;
-    .flowTotalText {
-        margin-bottom: 90px;
-        .flowerExpertsMainText {
-            width: 100%;
-            font-size: $font-size/1.5;
-            font-family: $font-family;
-            padding-bottom: 30px;
-            text-align: center;
-        }
-        .flowerExpertsMidText {
-            max-width: 520px;
-            margin-left: 27%;
-            text-align: center;
-            font-size: $font-size/3;
-            font-family: $font-family;
-            color: $text-color;
-        }
-    }
-    .flowerExpertsImg {
-        padding-bottom: 140px;
-        .flowerExperts {
-            margin-bottom: 20px;
-        }
-        .expertName {
-            margin-bottom: 0px;
-            letter-spacing: 1px;
-            font-family: $font-family;
-            font-size: $font-size/4;
-            text-align: center;
-        }
-        .expertJob {
-            font-family: $font-family;
-            text-align: center;
-            opacity: 0.5;
-        }
-    }
-}
-
-//    end flowerExpertsSection
-//    start subscribeSection
-.subscribeSection {
-    .joinUs {
-        background: url("../img/Untitled.png");
-        width: 100%;
-        min-height: 500px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        .joinText {
-            margin-top: 140px;
-            text-align: center;
-            font-size: $font-size/2;
-            font-family: "Playfair Display", serif;
-            font-weight: 400;
-            line-height: 1.4em;
-            color: white;
-        }
-        .joinEmail {
-            margin-left: 30%;
-            text-align: center;
-            font-size: $font-size/2;
-            font-family: $font-family;
-            color: $text-color;
-            margin-right: -5px;
-            margin-top: 20px;
-        }
-        .subs {
-            background-color: rgb(247, 71, 71);
-            color: white;
-            padding: 13px 25px 9.2px 25px;
-            font-size: $font-size/3;
-            cursor: pointer;
-        }
-    }
-}
-
-//    end subscribeSection
-//    start fromOurBlogSection
-.fromOurBlogSection {
-    background-color: $main-color;
-    padding-top: 120px;
-    .blogTotalText {
-        margin-bottom: 90px;
-        .blogMainText {
-            width: 100%;
-            font-size: $font-size/1.5;
-            font-family: $font-family;
-            padding-bottom: 30px;
-            text-align: center;
-        }
-        .blogMidText {
-            max-width: 520px;
-            margin-left: 27%;
-            text-align: center;
-            font-size: $font-size/3;
-            font-family: $font-family;
-            color: $text-color;
-        }
-    }
-    .bloggerImg {
-        padding-bottom: 140px;
-        .blogImg {
-            .blog {
-                margin-bottom: 20px;
-                max-height: 20%;
-                width: 350px;
-                height: 240px;
-                width: 102%;
-            }
-            .blogName {
-                margin-bottom: 0px;
-                letter-spacing: 1px;
+    
+    //    end subscribeSection
+    //    start fromOurBlogSection
+    .fromOurBlogSection {
+        background-color: $main-color;
+        padding-top: 120px;
+        .blogTotalText {
+            margin-bottom: 90px;
+            .blogMainText {
+                width: 100%;
+                font-size: $font-size/1.5;
                 font-family: $font-family;
-                font-size: $font-size/3+5;
+                padding-bottom: 30px;
                 text-align: center;
             }
-            .aboutBlog {
-                margin-top: 4px;
-                font-family: $font-family;
+            .blogMidText {
+                max-width: 520px;
+                margin-left: 27%;
                 text-align: center;
-                width: 280px;
-                opacity: 0.5;
-                margin-left: 40px;
-            }
-        }
-    }
-}
-
-//    end fromOurBlogSection
-.lastSection {
-    .lastSlide {
-        position: relative;
-        width: 550px;
-        height: 400px;
-        padding: 90px 0 90px 0;
-        text-align: center;
-        .active {
-            opacity: 1!important;
-            transition: all 1s;
-        }
-        .lorem {
-            opacity: 0;
-            position: absolute;
-            .lastSlideText {
-                margin-top: 25px;
-                margin-left: 10%;
                 font-size: $font-size/3;
-                width: 80%;
+                font-family: $font-family;
+                color: $text-color;
+            }
+        }
+        .bloggerImg {
+            padding-bottom: 140px;
+            .blogImg {
+                .blog {
+                    margin-bottom: 20px;
+                    max-height: 20%;
+                    width: 350px;
+                    height: 240px;
+                    width: 102%;
+                }
+                .blogName {
+                    margin-bottom: 0px;
+                    letter-spacing: 1px;
+                    font-family: $font-family;
+                    font-size: $font-size/3+5;
+                    text-align: center;
+                }
+                .aboutBlog {
+                    margin-top: 4px;
+                    font-family: $font-family;
+                    text-align: center;
+                    width: 280px;
+                    opacity: 0.5;
+                    margin-left: 40px;
+                }
             }
         }
     }
-    i {
-        position: absolute;
-        font-size: $font-size/3;
-        margin-top: 15%;
+    
+    //    end fromOurBlogSection
+    .lastSection {
+        .lastSlide {
+            position: relative;
+            width: 550px;
+            height: 400px;
+            padding: 90px 0 90px 0;
+            text-align: center;
+            .active {
+                opacity: 1!important;
+                transition: all 1s;
+            }
+            .lorem {
+                opacity: 0;
+                position: absolute;
+                .lastSlideText {
+                    margin-top: 25px;
+                    margin-left: 10%;
+                    font-size: $font-size/3;
+                    width: 80%;
+                }
+            }
+        }
+        i {
+            position: absolute;
+            font-size: $font-size/3;
+            margin-top: 15%;
+        }
+        .fa-long-arrow-alt-left {
+            cursor: pointer;
+            left: 25%;
+        }
+        .fa-long-arrow-alt-right {
+            cursor: pointer;
+            right: 25%;
+        }
     }
-    .fa-long-arrow-alt-left {
-        cursor: pointer;
-        left: 25%;
+    
+    .footer {
+        background-color: #FEFAF3;
+        a {
+            color: $text-color;
+            font-size: $font-size/5;
+        }
     }
-    .fa-long-arrow-alt-right {
-        cursor: pointer;
-        right: 25%;
-    }
-}
-
-.footer {
-    background-color: #FEFAF3;
-    a {
-        color: $text-color;
-        font-size: $font-size/5;
-    }
-}

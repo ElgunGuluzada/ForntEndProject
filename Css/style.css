@@ -46,17 +46,6 @@
   color: white;
 }
 
-.jumbotron {
-  background-color: #FAFAF9 !important;
-}
-
-.jumbotron h1 {
-  font-size: 50px;
-  line-height: 1.32em;
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-}
-
 .progressbars {
   width: 100%;
   height: 200px;
@@ -117,18 +106,126 @@
           transform: translateX(50%);
 }
 
+.tabsSection .tabPart1 {
+  margin-left: 1px;
+  margin-bottom: 120px;
+}
+
+.tabsSection .tabPartEnd {
+  margin: 120px 0;
+}
+
+.tabsSection .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 40px;
+  -webkit-transform: translateX(-40px) translateY(16px);
+          transform: translateX(-40px) translateY(16px);
+  border-left: none;
+}
+
+.tabsSection .tabLink {
+  width: 160px;
+  height: 50px;
+  color: #979797;
+  padding: 16px 10px;
+  border: 0.5px solid #EEEEEE;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.tabsSection .tabText {
+  border: 0.5px solid #EEEEEE;
+  padding: 40px 40px;
+  display: none;
+  color: #979797;
+}
+
+.tabsSection ul.tabs li.current {
+  background: #F34F3F;
+  color: white;
+}
+
+.tabsSection .tabText.current {
+  display: block;
+}
+
+.tabsSection .tabSecond {
+  background-color: #F6F6F6;
+  border: none;
+}
+
+.tabsSection .tabLength {
+  border: none;
+  font-size: 12px;
+}
+
+.tabsSection .tabBody {
+  border: none;
+  border-top: 0.6px solid #EEEEEE;
+}
+
+.tabsSection .tabPartEnd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tabsSection .tabPartEnd .tabLast {
+  margin-left: 0px;
+  display: block;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
 * {
   list-style-type: none;
 }
 
-.activeName::after {
+body .frame {
+  width: 100%;
+  overflow: hidden;
+}
+
+body .frame .zoomin {
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-position: center;
+  background-size: cover;
+}
+
+body .frame .zoomin:hover {
+  background-position: center;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body .jumbotron {
+  background-color: #FAFAF9 !important;
+  margin: 20px 0 80px 5px;
+}
+
+body .jumbotron h1 {
+  font-size: 50px;
+  line-height: 1.32em;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+body .activeName::after {
   display: block;
   background-color: black;
   width: 100%;
   height: 1px;
 }
 
-.activeColor {
+body .activeColor {
   color: red;
 }
 
@@ -190,7 +287,7 @@
 
 .header .navBar .mainName .shopMenu {
   position: absolute;
-  width: 175% !important;
+  width: 180% !important;
   padding-left: 80px;
   top: 100%;
   left: -50%;
@@ -350,7 +447,7 @@
   display: -ms-flexbox;
   display: flex;
   font-size: 20px;
-  right: 7%;
+  right: 4%;
   padding: 43px 20px 43px 16px;
   cursor: pointer;
 }
@@ -376,17 +473,6 @@
 
 .firstSlideSection {
   margin-bottom: 115px;
-}
-
-.firstSlideSection .arrow-left {
-  margin-right: -120px;
-  color: red;
-  background-color: red;
-}
-
-.firstSlideSection .arrow-prev {
-  margin-left: -120px;
-  background-color: red;
 }
 
 .firstSlideSection .leftSide {
@@ -442,19 +528,10 @@
 
 .allPicSection .cardImg {
   margin-top: 35px;
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .allPicSection .cardImg .thisImg {
-  width: 97%;
-}
-
-.allPicSection .cardImg .thisImg:hover {
-  max-width: 100%;
-  max-height: 100%;
-  -webkit-transform: scale(1.005);
-          transform: scale(1.005);
+  width: 100%;
 }
 
 .allPicSection .cardImg .flowName {
@@ -479,9 +556,7 @@
 }
 
 .valentineSection .valImg {
-  padding: 120px 0 120px 0;
-  width: 100%;
-  height: 100%;
+  margin: 120px 0 120px 0;
 }
 
 .valentineSection .valMainText {

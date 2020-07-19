@@ -1,17 +1,18 @@
 $(document).ready(function() {
     //tab start
-    // $(document).ready(function() {
-    //         $('ul.tabs li').click(function() {
-    //             var tab_id = $(this).attr('data-tab');
-    //             var parent = $(this).closest('div');
 
-    //             $(parent).find('li').removeClass('current');
-    //             $(parent).find('.tab-content').removeClass('current');
 
-    //             $(this).addClass('current');
-    //             $(parent).find("#" + tab_id).addClass('current');
-    //         })
-    //     })
+    $('ul.tabs li').click(function() {
+        var tab_id = $(this).attr('data-tab');
+        var parent = $(this).closest('div');
+
+        $(parent).find('li').removeClass('current');
+        $(parent).find('.tabText').removeClass('current');
+
+        $(this).addClass('current');
+        $(parent).find("#" + tab_id).addClass('current');
+    })
+
     //tab end
 
     // accordion start
