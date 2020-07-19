@@ -1,21 +1,45 @@
 $(document).ready(function() {
+    //tab start
+    // $(document).ready(function() {
+    //         $('ul.tabs li').click(function() {
+    //             var tab_id = $(this).attr('data-tab');
+    //             var parent = $(this).closest('div');
+
+    //             $(parent).find('li').removeClass('current');
+    //             $(parent).find('.tab-content').removeClass('current');
+
+    //             $(this).addClass('current');
+    //             $(parent).find("#" + tab_id).addClass('current');
+    //         })
+    //     })
+    //tab end
 
     // accordion start
 
-    $(document).on("click", ".accordHeader", function() {
+    $(document).on("click", ".accordion_head", function() {
+        $(this).addClass("main").css("transition", "all .5s");
+        $(this).siblings().removeClass("main");
 
+        if ($('.accordion_body').is(':visible')) {
+            $(".accordion_body").slideUp(300);
+            $(".plusminus").text('+');
+        }
+        if ($(this).next(".accordion_body").is(':visible')) {
+            $(this).next(".accordion_body").slideUp(300);
+            $(this).children(".plusminus").text('+');
+        } else {
+            $(this).next(".accordion_body").slideDown(300);
+            $(this).children(".plusminus").text('-');
+        }
         if ($(this).next()[0] != $(".active")[0]) {
-            $(".active").slideUp("400", function() {
+            $(".active").slideUp("fast", function() {
                 $(this).removeClass("active")
-
-
             })
-            $(this).next().slideDown("400", function() {
+            $(this).next().slideDown("fast", function() {
                 $(this).addClass("active")
-
             })
         } else {
-            $(".active").slideUp("400", function() {
+            $(".active").slideUp("fast", function() {
                 $(this).removeClass("active")
             })
         }

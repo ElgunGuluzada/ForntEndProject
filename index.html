@@ -157,8 +157,8 @@
                                         <li><a href="#">Classic<i class="fas fa-arrow-right"></i></a>
                                             <div class="mainName elementsmenu">
                                                 <ul>
-                                                    <li>Accordions</li>
-                                                    <li> <a href="Tabs.html">Tabs</a> </li>
+                                                    <li><a href="accordions.html">Tabs</a>Accordions</li>
+                                                    <li><a href="tab.html">Tabs</a> </li>
                                                     <li>Buttons</li>
                                                     <li>Video Buttons</li>
                                                     <li>Contact Form</li>
@@ -172,7 +172,7 @@
                                                     <li>Counters</li>
                                                     <li>Countdown</li>
                                                     <li>Google Maps</li>
-                                                    <li> <a href="progress.html">Progress Bar</a> </li>
+                                                    <li> <a href="progressbar.html">Progress Bar</a> </li>
                                                     <li>Pie Charts</li>
                                                 </ul>
                                             </div>
@@ -223,39 +223,56 @@
     <!-- end Header -->
 
     <!-- start slideSection -->
-    <section class="slideSection">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 slider">
 
-                    <div class=" slideImages">
-                        <div class="items">
-                            <img src="img/h3-slider-background.jpg" alt="">
-                        </div>
-                        <div class="items">
-                            <img src="img/h3-slider-background-2.jpg" alt="">
+    <section class="firstSlideSection">
+        <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
 
-                        </div>
-                        <div class="items">
-                            <img src="img/h3-slider-background-3.jpg" alt="">
 
-                        </div>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="view">
+                        <img class="d-block w-100" src="img/h3-slider-background.jpg" alt="First slide">
+                        <div class="mask rgba-black-light"></div>
                     </div>
 
-                    <i class="fas fa-long-arrow-alt-left left"></i>
-                    <i class="fas fa-long-arrow-alt-right right"></i>
+                </div>
+                <div class="carousel-item">
+                    <div class="view">
+                        <img class="d-block w-100" src="img/h3-slider-background-2.jpg" alt="Second slide">
+                        <div class="mask rgba-black-strong"></div>
+                    </div>
 
-                    <div class=" leftSide">
-                        <h2>Send <span>flowers</span> like you mean it. </h2>
-                        <p>Where flowers are our inspiration to create lasting memories. Whatever the occasion, our flowers will make it special cursus a sit amet mauris. </p>
-                        <img src="img/h2-sign-img.png" alt="">
+                </div>
+                <div class="carousel-item">
+                    <div class="view">
+                        <img class="d-block w-100" src="img/h3-slider-background-3.jpg" alt="Third slide">
+                        <div class="mask rgba-black-slight"></div>
                     </div>
 
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon arrow-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon arrow-left" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+            <div class="leftSide">
+                <h2>Send <span>flowers</span> like you mean it. </h2>
+                <p>Where flowers are our inspiration to create lasting memories. Whatever the occasion, our flowers will make it special cursus a sit amet mauris. </p>
+                <img src="img/h2-sign-img.png" alt="">
+            </div>
         </div>
     </section>
+
+
     <!-- end slideSection -->
+
+
+
 
     <!-- start allPicSection -->
     <section class="allPicSection">
