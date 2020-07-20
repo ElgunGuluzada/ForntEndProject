@@ -1,9 +1,254 @@
 .productList {
-    background-color: red;
-    .smallImgs {
+    margin-left: 6%;
+    .partOne {
+        border-left: none !important;
+        margin: 0 12px;
         img {
-            width: 100%!important;
+            width: 110px;
+            height: 100px;
             margin-bottom: 20px;
         }
     }
+    .partTwo {
+        img {
+            height: 77% !important;
+        }
+    }
+    .partRight {
+        left: 5%;
+        .body {
+            color: #6d6a6a;
+            width: 100%;
+            .flowPrice {
+                color: $text-color;
+            }
+            .middlePart {
+                margin-bottom: 60px;
+                .count {
+                    padding: 10px 20px 9px 20px;
+                    border: 1px solid $text-color;
+                    color: $text-color;
+                    width: 240px;
+                    .quantity {
+                        margin-right: 120px;
+                        font-size: $font-size/5;
+                    }
+                }
+                button {
+                    padding: 12px 40px;
+                    background-color: black;
+                    color: white;
+                    font-size: $font-size/5;
+                }
+            }
+            .lastPart {
+                p {
+                    font-size: $font-size/5;
+                }
+            }
+        }
+    }
+}
+
+.relatedProducts {
+    margin-bottom: 80px;
+    p {
+        margin-bottom: -80px;
+    }
+}
+
+.orangesmallimg {
+    img {
+        height: 90px !important;
+        cursor: zoom-in;
+    }
+    .card {
+        margin-top: 50px;
+    }
+}
+
+.orangebigimg {
+    div {
+        margin: 50px 40px;
+    }
+    img {
+        height: 520px;
+        cursor: zoom-in;
+    }
+}
+
+.orangecontent {
+    margin-left: 12%;
+    margin-top: 4%;
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 10px;
+    }
+    span {
+        &:nth-child(2) {
+            font-size: 16px;
+            color: rgb(155, 153, 153);
+        }
+    }
+    p {
+        font-size: 16px;
+        color: rgb(155, 154, 154);
+        padding-top: 20px;
+    }
+    .input {
+        width: 420px;
+        height: 50px;
+        border: 1px solid rgb(155, 154, 154);
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .orangeinfo {
+        width: 200px;
+        line-height: 0.1;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+    button {
+        height: 50px;
+        width: 180px;
+        background-color: black;
+        color: white;
+        border: none;
+        outline: none;
+    }
+}
+
+.orangeinfo {
+    span {
+        color: black;
+        font-size: 14px;
+    }
+}
+
+.input {
+    p {
+        padding: 10px 18px;
+    }
+    span {
+        padding-top: 12px;
+    }
+    i {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+}
+
+.review {
+    display: flex;
+    .reviewimg {
+        img {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.reviewbox {
+    h2 {
+        padding: 40px 40px;
+        font-size: 40px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.reviewinput {
+    textarea {
+        border: 1px solid rgb(194, 193, 193) !important;
+    }
+}
+
+.reviewcontent {
+    span {
+        &:nth-child(1) {
+            font-size: 14px;
+            color: black;
+            font-weight: 600;
+            padding-bottom: 10px;
+        }
+        &:nth-child(2) {
+            font-size: 12px;
+            color: rgb(155, 154, 154);
+            padding-left: 12px;
+        }
+    }
+    p {
+        margin-top: 10px;
+        color: rgb(155, 155, 155);
+        font-size: 15px;
+    }
+}
+
+.inputproduct {
+    input {
+        width: 100%;
+        height: 50px;
+        padding-top: 20px;
+        border: 1px solid rgb(192, 190, 190) !important;
+    }
+    #checkbox {
+        width: 20px;
+        margin-left: 0;
+    }
+    button {
+        width: 140px;
+        height: 50px;
+        background-color: rgb(243, 33, 33);
+        color: white;
+        border: none;
+        outline: none;
+    }
+}
+
+.addition {
+    height: 200px;
+    font-size: 14px;
+}
+
+.additioncontent {
+    position: absolute;
+    left: 10%;
+    margin-top: 30px;
+    p {
+        font-size: 15px;
+        font-weight: 600;
+        color: black;
+    }
+    span {
+        font-size: 13px;
+        color: rgb(155, 154, 154);
+    }
+}
+
+.productdescription {
+    h2 {
+        font-size: 35px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px 0px;
+    }
+    p {
+        font-size: 16px;
+        color: rgb(155, 155, 155);
+    }
+}
+
+.productlistmenu {
+    a {
+        font-size: 20px;
+        background: linear-gradient(to bottom, rgb(167, 167, 167), rgb(88, 88, 86));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border: none !important;
+    }
+}
+
+.accordion2 {
+    margin: 70px 0px;
 }

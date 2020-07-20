@@ -5,21 +5,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
     .skills {
         width: 100%;
         max-width: 1200px;
-        padding: 0 20px;
+        padding: 20px;
         .skill-name {
             font-size: 18px;
             font-weight: 400;
             text-transform: uppercase;
-            margin: 20px 0;
             font-family: "Playfair Display", sans-serif;
         }
         .skill-bar {
             height: 3px;
             background: #EBEBEB;
             border-radius: 8px;
+            margin-bottom: 10px;
             .skill-per {
                 height: 3px;
                 background-color: rgb(243, 79, 63);
@@ -29,15 +30,15 @@
                 position: relative;
                 &::before {
                     content: attr(per);
-                    position: absolute;
+                    position: relative;
                     padding: 4px 6px;
                     color: rgb(32, 31, 31);
                     font-size: 18px;
                     border-radius: 4px;
-                    top: -35px;
-                    right: 0;
+                    top: -25px;
+                    left: 27rem !important;
                     font-weight: 400;
-                    font-family: "Quicksand", sans-serif;
+                    font-family: "Playfair Display", sans-serif;
                     transform: translateX(50%);
                 }
             }
@@ -47,6 +48,11 @@
                 height: 3px;
                 background: #000000!important;
                 border-radius: 8px;
+                .skill-per {
+                    &::before {
+                        left: 61rem !important;
+                    }
+                }
             }
         }
     }

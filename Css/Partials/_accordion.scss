@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+.accordion {
+    .toggle {
+        &:hover .plus {
+            visibility: hidden;
+        }
+    }
+    .sign {
+        margin: 0 20px 0 10px;
+    }
+    .plus {
+        position: absolute;
+    }
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 .accordMenu {
     margin-left: 5%;
@@ -32,11 +46,11 @@ ul li a.toggle {
 }
 
 ul li a.toggle:hover {
-    background-color: red;
+    background-color: #F34F3F;
     color: white;
     transition: all 1s;
 }
 
-.active {
-    display: block;
+.main {
+    background-color: #F34F3F;
 }
