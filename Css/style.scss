@@ -9,11 +9,12 @@
    }
    
    .sticky {
-       position: fixed!important;
+       position: sticky!important;
        z-index: 90000;
        border-bottom: 0.5px solid #ececec;
        width: 100vw;
        height: 110px;
+       top: 0!important;
    }
    
    body {
