@@ -6,6 +6,7 @@ $(document).ready(function() {
             header.classList.toggle("sticky", window.scrollY > 700)
             if (window.scrollY > 700) {
                 document.querySelector(".mainMenu").style.paddingLeft = "5%"
+                document.querySelector(".icon").style.display = "none"
 
             } else {
                 document.querySelector(".mainMenu").style.paddingLeft = "0"

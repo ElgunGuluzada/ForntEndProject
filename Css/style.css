@@ -702,12 +702,13 @@ ul li a.toggle:hover {
   list-style-type: none;
 }
 
-.sticky {
-  position: fixed !important;
+body .sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
   z-index: 90000;
   border-bottom: 0.5px solid #ececec;
-  width: 100vw;
-  height: 110px;
+  height: 106px;
+  top: 0 !important;
 }
 
 body .frame {
@@ -763,23 +764,20 @@ body .activeColor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
 }
 
 .header .fiorello {
-  position: absolute;
-  padding: 42px 18px 40px 20px;
+  padding: 40px 18px 40px 20px;
   width: 250px;
-  left: 22%;
+  margin-left: 70px;
   cursor: pointer;
 }
 
 .header .navBar {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  right: 10%;
+  margin-left: -27px;
 }
 
 .header .navBar li::after {
@@ -818,7 +816,7 @@ body .activeColor {
   position: absolute;
   width: 190% !important;
   padding-left: 80px;
-  top: 100%;
+  top: 80%;
   left: -55%;
   font-family: "Playfair Display";
   z-index: 400;
@@ -830,7 +828,7 @@ body .activeColor {
 .header .navBar .mainName .shopMenu .shopMenuLists {
   position: relative;
   width: 25% !important;
-  margin: 30px 0 85px 0;
+  padding: 28px 0;
   float: left;
 }
 
@@ -873,7 +871,7 @@ body .activeColor {
   position: absolute;
   background-color: white;
   width: 200px;
-  top: 42px;
+  top: 39px;
   padding: 8px 30px;
   text-align: left;
 }
@@ -976,7 +974,6 @@ body .activeColor {
   display: -ms-flexbox;
   display: flex;
   font-size: 20px;
-  right: 4%;
   padding: 43px 20px 43px 16px;
   cursor: pointer;
 }
@@ -1001,7 +998,8 @@ body .activeColor {
 }
 
 .firstSlideSection {
-  margin-bottom: 115px;
+  margin-top: -20px;
+  margin-bottom: 117px;
 }
 
 .firstSlideSection .leftSide {
@@ -1024,7 +1022,7 @@ body .activeColor {
 }
 
 .firstSlideSection .leftSide p {
-  margin: 25px 0 25px 0;
+  margin: 25px 0;
   font-family: "Playfair Display";
   color: #979797;
   font-size: 17.64706px;
@@ -1035,7 +1033,7 @@ body .activeColor {
 }
 
 .allPicSection {
-  margin-top: 65px;
+  margin-top: 70px;
 }
 
 .allPicSection .aboutPic {
@@ -1334,5 +1332,17 @@ body .activeColor {
 .footer a {
   color: #979797;
   font-size: 12px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .icon {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navBar {
+    display: none !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
